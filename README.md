@@ -12,7 +12,7 @@ This project implements AI Behaviour Tree and Blackboard included in Unreal Engi
 * All code was built using UE4's visual scripting blueprints.
 * Specific AI behaviour was built using UE4's Behaviour Tree, Blackboard, Environment Query System (EQS) and blueprints.
 
-AI blueprints and Behaviour Tree are commented within the project as well.
+Note: AI-related blueprints and Behaviour Tree are commented within the project as well.
 
 ## AI Behaviour
 
@@ -22,6 +22,8 @@ In this project, there are 5 AI-controlled characters. The level goes through 5 
 3- Running up to behind each other to try landing a sneak/back attack
 4- Grouping with teammates at safety points
 5- End of level and final score calculation
+
+The characters navigate the level using the built-in Navmesh system, and can jump onto higher platforms using Navlinks setup – also included as part of UE4.
 
 ### Stage 1 - Run, Forrest, Run!
 
@@ -37,7 +39,7 @@ It is possible for a character to not run to any coin. This case happens when al
 At this stage, the AI characters are expected to move towards each other but only if the other character they sight has their back to them - simulating a sneak attack from the back. The main functionality is similar to the coin collection, with a few exceptions:
 * The AI character cannot sneak behind the same 'enemy' twice; this is to avoid having it stuck behind one enemy and not moving away so long as the stage is active
 * Although the character can turn around (like in the coin collection stage) if it doesn't see an enemy in front of it, this action is randomised here and when the AI isn't allowed to perform it, it instead picks a random location point anywhere in the level and moves to that point before trying again to find an enemy. This is to simulate a wandering around behaviour, more typical to a human player.
-* The AI character now needs to do two checks in the EQS, instead of the one in the coin collection. First, it needs to be able to see an enemy in front of it. Second, the enemy must be looking the opposite way and have their back facing the AI character. Without this rule, the attack will be head on, and can't be considered sneaky anymore.
+* The AI character now needs to do two checks in the EQS, instead of the one in the coin collection. First, it needs to be able to see an enemy in front of it. Second, the enemy must be looking the opposite way and have their backs facing the AI character. Without this rule, the attack will be head on, and can't be considered sneaky anymore.
 
 ### Stage 4 - Retreat with your Ally
 
@@ -47,7 +49,7 @@ In this final stage, each 2 characters (including the player) are assigned a tea
 
 No AI behaviour takes place here. The scores of all 4 previous stages is summed and displayed and the game (and tests if running) end.
 
-## Running the tests
+## Running the Tests
 
 There are passive and active tests included in the project. Each of these tests is meant to check that all AI conditions exist and have been accurately implemented.
 To run them, go to Window -> Developer Tools -> Session Frontend, then click on the 'Automation' tab and click 'Run Level Test'. The included tests will then run automatically with each test ending in 'success' or 'failed'. If the test fails, some information will be shown in the lower Automation Test Results message window.
