@@ -7,12 +7,6 @@ This project implements AI Behaviour Tree and Blackboard included in Unreal Engi
 * UE4 editor version 4.23
 * Github Desktop (optional)
 
-## Running the tests
-
-There are passive and active tests included in the project. Each of these tests is meant to check that all AI conditions exist and have been accurately implemented.
-To run them, go to Window -> Developer Tools -> Session Frontend, then click on the 'Automation' tab and click 'Run Level Test'. The included tests will then run automatically with each test ending in 'success' or 'failed'. If the test fails, some information will be shown in the lower Automation Test Results message window.
-With the current build, all tests were passed with success by the AI implementation.
-
 ## Built With
 
 * All code was built using UE4's visual scripting blueprints.
@@ -53,6 +47,11 @@ In this final stage, each 2 characters (including the player) are assigned a tea
 
 No AI behaviour takes place here. The scores of all 4 previous stages is summed and displayed and the game (and tests if running) end.
 
+## Running the tests
+
+There are passive and active tests included in the project. Each of these tests is meant to check that all AI conditions exist and have been accurately implemented.
+To run them, go to Window -> Developer Tools -> Session Frontend, then click on the 'Automation' tab and click 'Run Level Test'. The included tests will then run automatically with each test ending in 'success' or 'failed'. If the test fails, some information will be shown in the lower Automation Test Results message window.
+With the current build, all tests were passed with success by the AI implementation.
 
 ## Team Members
 
