@@ -1,6 +1,6 @@
 # UE4: Game AI Project
 
-This project implements AI Behaviour Tree and Blackboard included in Unreal Engine 4. This is made for the 'Artificial Intelligence for Games' course in Tallinn University.
+This project implements AI Behaviour Tree and Blackboard included in Unreal Engine 4. This is made for the 'Artificial Intelligence for Games' course in Tallinn University. A pdf version of this document with images can be found in the 'Documentation' folder. A video recording the scenes and what is expected is available in the 'Video' folder.
 
 ### Prerequisites
 
